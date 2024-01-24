@@ -102,12 +102,16 @@ export default function CategoryMenu() {
   const [menu1HoveredId, setMenu1HoveredId] = useState();
 
   return (
-    <div className="relative" onMouseLeave={() => setMenu1HoveredId(undefined)}>
+    <div className="absolute z-10 left-0 right-0">
+    <div className="relative container xl:w-[76.25rem]" onMouseLeave={() => setMenu1HoveredId(undefined)}>
       {/* Menu Level 1 */}
       <div className="bg-white py-2 flex flex-col w-[13rem]">
         {menuItemsLevel1.map(item => (
-          <button className="flex px-1.5 py-1 gap-2 hover:bg-zinc-100 hover:text-primary-500"
-                  onMouseOver={() => setMenu1HoveredId(item[0])}>
+          <button
+            className="flex px-1.5 py-1 gap-2 hover:bg-zinc-100 hover:text-primary-500"
+            onMouseOver={() => setMenu1HoveredId(item[0])}
+            key={item[0]}
+          >
             <div className="size-4">
               <Image src={item[1]} alt="icon"/>
             </div>
@@ -118,14 +122,17 @@ export default function CategoryMenu() {
 
       {/* Menu Level 2 */}
       {menu1HoveredId && menuItemsLevel2[menu1HoveredId] &&
-        <div className="bg-white py-2 flex flex-col w-[13rem] absolute left-[13rem] top-0 bottom-0">
+        <div className="bg-white py-2 flex flex-col w-[13rem] absolute left-[13rem] top-0">
           {menuItemsLevel2[menu1HoveredId].map(item => (
-            <button className="flex px-1.5 py-1 gap-2 hover:bg-zinc-100 hover:text-primary-500">
+            <button
+              className="flex px-1.5 py-1 gap-2 hover:bg-zinc-100 hover:text-primary-500"
+            >
               <div className="text-xs">{item}</div>
             </button>
           ))}
         </div>
       }
+    </div>
     </div>
   );
 }

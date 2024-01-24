@@ -5,6 +5,7 @@ import ComputerAccessoriesProducts from "@/app/_components/computer_accessories_
 import KitchenAndDiningProducts from "@/app/_components/kitchen_and_dining_products";
 import BikeAccessoriesProducts from "@/app/_components/bike_accessories_products";
 import HeroSection from "@/app/_components/hero_section";
+import LiveVideosCollection from "@/app/_components/live_videos_collection";
 
 export default function MainContent() {
   return (
@@ -16,6 +17,8 @@ export default function MainContent() {
       <FlashSaleProducts/>
 
       <FreeDeliveryProducts/>
+
+      <LiveVideosCollection/>
 
       <ComputerAccessoriesProducts/>
 

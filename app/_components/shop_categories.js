@@ -28,12 +28,12 @@ function ShopButton({icon, text}) {
   return (
     <button className="bg-white rounded-full p-2 flex items-center justify-between">
       <div className="flex items-center gap-4">
-        <div className="size-9 rounded-full bg-primary-100 p-1.5">
-          <Image src={icon} alt={"right icon"}/>
+        <div className="size-9 shrink-0 rounded-full bg-primary-100 p-1.5">
+          <Image src={icon} alt={"shop icon"}/>
         </div>
         <div className="text-base font-semibold text-zinc-900">{text}</div>
       </div>
-      <Image src={chevronRightIcon} alt={"right icon"}/>
+      <Image src={chevronRightIcon} className="sm:hidden md:block" alt={"right icon"}/>
     </button>
   );
 }

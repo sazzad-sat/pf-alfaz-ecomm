@@ -4,10 +4,14 @@ import MainContent from "@/app/_components/main_content";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen">
-      <SubHeader/>
-      <Header />
-      <MainContent />
-    </main>
+    <>
+      <div className="sticky top-0 z-50 shadow-lg">
+        <SubHeader/>
+        <Header/>
+      </div>
+      <main className="flex flex-col overflow-x-hidden">
+        <MainContent/>
+      </main>
+    </>
   );
 }

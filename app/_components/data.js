@@ -1,4 +1,10 @@
 import productImage from "@/app/_assets/pictures/electronic_product_default.jpg";
+import streamerImage from "./assets/live_video_pics/streamer.svg";
+import image1 from "./assets/live_video_pics/video_1.png";
+import image2 from "./assets/live_video_pics/video_2.png";
+import image3 from "./assets/live_video_pics/video_3.png";
+import image4 from "./assets/live_video_pics/video_4.png";
+import image5 from "./assets/live_video_pics/video_5.png";
 
 export const flashSaleProductsData = [
   {
@@ -7,11 +13,11 @@ export const flashSaleProductsData = [
       "name": "Cozy Flannel Receiving Blanket for Newborns",
       "price": 24999,
       "cutPrice": 14999,
-      "discountPercentage": 40
+      "discountPercentage": 40,
     },
     "view": {
-      "discountPercentageTag": true
-    }
+      "discountPercentageTag": true,
+    },
   },
   {
     "product": {
@@ -19,11 +25,11 @@ export const flashSaleProductsData = [
       "name": "Organic Cotton Muslin Swaddle Wrap for Babies",
       "price": 18990,
       "cutPrice": 9990,
-      "discountPercentage": 47
+      "discountPercentage": 47,
     },
     "view": {
-      "discountPercentageTag": true
-    }
+      "discountPercentageTag": true,
+    },
   },
   {
     "product": {
@@ -31,11 +37,11 @@ export const flashSaleProductsData = [
       "name": "Adorable Animal-Themed Crib Sheets for Babies",
       "price": 15990,
       "cutPrice": 7990,
-      "discountPercentage": 50
+      "discountPercentage": 50,
     },
     "view": {
-      "discountPercentageTag": true
-    }
+      "discountPercentageTag": true,
+    },
   },
   {
     "product": {
@@ -43,11 +49,11 @@ export const flashSaleProductsData = [
       "name": "Soft and Cuddly Plush Toys for Infants",
       "price": 9990,
       "cutPrice": 4990,
-      "discountPercentage": 50
+      "discountPercentage": 50,
     },
     "view": {
-      "discountPercentageTag": true
-    }
+      "discountPercentageTag": true,
+    },
   },
   {
     "product": {
@@ -55,13 +61,13 @@ export const flashSaleProductsData = [
       "name": "Baby Play Gym with Activity Mat and Toys",
       "price": 34990,
       "cutPrice": 19990,
-      "discountPercentage": 43
+      "discountPercentage": 43,
     },
     "view": {
-      "discountPercentageTag": true
-    }
-  }
-]
+      "discountPercentageTag": true,
+    },
+  },
+];
 
 export const freeDeliveryProductsData = Array.from(Array(10).keys()).fill(
   {
@@ -74,10 +80,10 @@ export const freeDeliveryProductsData = Array.from(Array(10).keys()).fill(
       rating: {
         average: 4,
         total_rated_user: 172,
-      }
+      },
     },
     view: {
-      freeShippingTitle: true
+      freeShippingTitle: true,
     },
   },
 );
@@ -93,10 +99,26 @@ export const normalProductsData = Array.from(Array(10).keys()).fill(
       rating: {
         average: 4,
         total_rated_user: 172,
-      }
+      },
     },
-    view: {
-
-    },
+    view: {},
   },
 );
+
+
+const images = {
+  1: image1,
+  2: image2,
+  3: image3,
+  4: image4,
+  5: image5,
+};
+export const liveVideosData = Array.from(Array(7).keys()).map((v, i) => ({
+  name: "Soft Newborn Baby Wrap Blankets Baby Sleeping",
+  image: images[i+1],
+  total_viewers: Math.round(Math.random() * 1000 + 1),
+  streamer: {
+    name: "Alfaz mart Fashion Bd",
+    image: streamerImage,
+  },
+}));
