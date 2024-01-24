@@ -6,6 +6,7 @@ import KitchenAndDiningProducts from "@/app/_components/kitchen_and_dining_produ
 import BikeAccessoriesProducts from "@/app/_components/bike_accessories_products";
 import HeroSection from "@/app/_components/hero_section";
 import LiveVideosCollection from "@/app/_components/live_videos_collection";
+import ProductCategories from "@/app/_components/product_categories";
 
 export default function MainContent() {
   return (
@@ -16,15 +17,17 @@ export default function MainContent() {
 
       <FlashSaleProducts/>
 
-      <FreeDeliveryProducts/>
+      <ProductCategories />
 
-      <LiveVideosCollection/>
+      <FreeDeliveryProducts/>
 
       <ComputerAccessoriesProducts/>
 
       <KitchenAndDiningProducts/>
 
       <BikeAccessoriesProducts/>
+
+      <LiveVideosCollection/>
     </div>
   );
 }

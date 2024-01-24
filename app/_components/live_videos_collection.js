@@ -19,6 +19,5 @@ export default function LiveVideosCollection() {
         </div>
       </div>
     </div>
-
   );
 }
